@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <link rel="icon" type="image/png" href="../IMG/faviconfreesiaroxo.png">
+        <meta charset="UTF-8">
+        <title>Resultados - Freesia</title>
+        <link rel="stylesheet" href="../ScriptCSS/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Gwendolyn&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href="index.html">Início</a>
+                <a href="sobre.html">Sobre o Projeto</a>
+                <a href="consultapublica.html">Consulta Pública</a>
+                <a href="cadastro.html">Cadastro de Coleta</a>
+            </nav>
+
+    <main>
+    <h2>Cadastrar Espécime no Herbário</h2>
+
+    <form id="formCadastro" class="card-form">
+
+        <label>Nome Popular</label>
+        <input type="text" id="nomePopular" placeholder="Ex: Ipê Roxo">
+
+        <label>Nome Científico</label>
+        <input type="text" id="nomeCientifico" placeholder="Ex: Handroanthus impetiginosus">
+
+        <label>Família</label>
+        <input type="text" id="familia">
+
+        <label>Gênero</label>
+        <input type="text" id="genero">
+
+        <label>Espécie</label>
+        <input type="text" id="especie">
+
+        <label>Local de Coleta</label>
+        <input type="text" id="local">
+
+        <label>Data de Coleta</label>
+        <input type="date" id="data">
+
+        <label>Coletor</label>
+        <input type="text" id="coletor">
+
+        <label>Imagem (URL)</label>
+        <input type="text" id="imagem" placeholder="Cole o link da imagem">
+
+        <div class="botoes">
+            <button type="submit">Salvar Espécime</button>
+            <button type="reset">Limpar</button>
+        </div>
+
+        <p id="msg"></p>
+
+    </form>
+</main>
+
+    <footer>
+        <p>&copy; 2026 Freesia - Herbário Virtual</p>
+    </footer>
+    <script src="../ScriptJS/cadastro.js"></script>
+</body>
+</html>
