@@ -1,0 +1,190 @@
+/* ==========================================
+   FORMULÁRIO DE CADASTRO
+========================================== */
+
+.card-form {
+
+    width: 100%;
+    max-width: 750px;
+
+    margin: 30px auto;
+
+    padding: 30px;
+
+    background: #ffffff;
+
+    border-radius: 15px;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,.10);
+
+}
+
+
+/* ==========================================
+   RÓTULOS
+========================================== */
+
+.card-form label {
+
+    display: block;
+
+    margin-top: 18px;
+
+    margin-bottom: 6px;
+
+    font-weight: bold;
+
+    color: #333;
+
+}
+
+
+/* ==========================================
+   CAMPOS
+========================================== */
+
+.card-form input {
+
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #cccccc;
+
+    border-radius: 10px;
+
+    font-size: 15px;
+
+    transition: .2s;
+
+}
+
+
+/* Campo selecionado */
+
+.card-form input:focus {
+
+    outline: none;
+
+    border-color: rgb(106,193,105);
+
+    box-shadow: 0 0 5px rgba(106,193,105,.35);
+
+}
+
+
+/* ==========================================
+   PLACEHOLDER
+========================================== */
+
+.card-form input::placeholder {
+
+    color: #999;
+
+}
+
+
+/* ==========================================
+   BOTÕES
+========================================== */
+
+.botoes {
+
+    display: flex;
+
+    gap: 15px;
+
+    margin-top: 30px;
+
+}
+
+
+.botoes button {
+
+    flex: 1;
+
+    padding: 12px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: .2s;
+
+}
+
+
+/* Botão salvar */
+
+.botoes button[type="submit"] {
+
+    background: rgb(106,193,105);
+
+    color: white;
+
+}
+
+.botoes button[type="submit"]:hover {
+
+    background: rgb(87,168,90);
+
+}
+
+
+/* Botão limpar */
+
+.botoes button[type="reset"] {
+
+    background: #e5e5e5;
+
+    color: #333;
+
+}
+
+.botoes button[type="reset"]:hover {
+
+    background: #d5d5d5;
+
+}
+
+
+/* ==========================================
+   MENSAGEM
+========================================== */
+
+#msg {
+
+    margin-top: 20px;
+
+    text-align: center;
+
+    font-weight: bold;
+
+    min-height: 22px;
+
+}
+
+
+/* ==========================================
+   RESPONSIVIDADE
+========================================== */
+
+@media (max-width: 700px) {
+
+    .card-form {
+
+        padding: 20px;
+
+    }
+
+    .botoes {
+
+        flex-direction: column;
+
+    }
+
+}
