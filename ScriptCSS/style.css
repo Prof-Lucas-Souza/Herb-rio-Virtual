@@ -27,7 +27,11 @@ body {
 header {
     background-color: #fffee9;
     text-align: center;
-    padding: 20px;
+
+    padding: 20px 20px 15px;
+
+    /* Linha verde discreta */
+    border-bottom: 2px solid #dcebd8;
 }
 
 
@@ -35,12 +39,20 @@ header {
    TÍTULO PRINCIPAL
 ========================================= */
 
-h1 {
+header h1 {
     font-family: 'Gwendolyn', cursive;
+
     font-size: 7.5em;
+
+    font-weight: normal;
+
     text-align: center;
+
     color: #000000;
-    margin: 20px 0;
+
+    margin: 0;
+
+    line-height: 0.8;
 }
 
 
@@ -50,8 +62,11 @@ h1 {
 
 h2 {
     font-family: 'Cinzel Decorative', serif;
+
     color: rgb(106, 193, 105);
+
     text-align: center;
+
     margin-bottom: 20px;
 }
 
@@ -61,18 +76,76 @@ h2 {
 ========================================= */
 
 nav {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 35px;
 }
 
 nav a {
-    margin: 0 15px;
+    position: relative;
+    display: inline-block;
+
+    padding: 10px 18px;
+
     text-decoration: none;
+
     color: #000000;
+
+    font-family: Arial, sans-serif;
+    font-size: 18px;
     font-weight: bold;
+
+    border-radius: 8px;
+
+    /* Impede que o fundo ultrapasse o botão */
+    overflow: hidden;
+
+    /* Mantém o texto acima do efeito */
+    z-index: 1;
+
+    /* Transição da cor do texto */
+    transition: color 0.4s ease;
 }
 
+
+/* =========================================
+   FUNDO VERDE ANIMADO
+========================================= */
+
+nav a::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 0;
+    height: 100%;
+
+    background-color: rgb(106, 193, 105);
+
+    border-radius: 8px;
+
+    z-index: -1;
+
+    transition: width 0.4s ease;
+}
+
+
+/* =========================================
+   HOVER
+========================================= */
+
 nav a:hover {
-    color: rgb(106, 193, 105);
+    color: #fffeed;
+}
+
+
+nav a:hover::before {
+    width: 100%;
 }
 
 
@@ -82,14 +155,20 @@ nav a:hover {
 
 main {
     width: 100%;
+
     max-width: 1200px;
+
     margin: 0 auto;
+
     padding: 25px;
+
     line-height: 1.6;
 }
 
+
 section p {
     margin-bottom: 20px;
+
     text-align: justify;
 }
 
@@ -100,8 +179,11 @@ section p {
 
 .highlight {
     background-color: rgb(255, 250, 205);
+
     padding: 15px;
+
     border-left: 5px solid rgb(105, 193, 105);
+
     margin: 20px 0;
 }
 
@@ -112,29 +194,79 @@ section p {
 
 footer {
     text-align: center;
+
     padding: 20px;
+
     margin-top: 40px;
+
     background-color: #fffee9;
+
+    border-top: 1px solid #dcebd8;
 }
 
 
 /* =========================================
-   RESPONSIVIDADE GERAL
+   RESPONSIVIDADE
 ========================================= */
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
 
-    h1 {
+    /* Navegação */
+    nav {
+        flex-wrap: wrap;
+
+        gap: 15px 25px;
+
+        margin-bottom: 25px;
+    }
+
+
+    nav a {
+        font-size: 16px;
+    }
+
+
+    /* Título */
+    header h1 {
         font-size: 5em;
     }
 
-    nav a {
-        display: block;
-        margin: 10px 0;
-    }
 
+    /* Conteúdo */
     main {
         padding: 15px;
+    }
+
+}
+
+
+/* =========================================
+   RESPONSIVIDADE PARA CELULARES
+========================================= */
+
+@media (max-width: 500px) {
+
+    header {
+        padding: 20px 15px;
+    }
+
+
+    nav {
+        flex-direction: column;
+
+        gap: 12px;
+
+        margin-bottom: 25px;
+    }
+
+
+    nav a {
+        font-size: 16px;
+    }
+
+
+    header h1 {
+        font-size: 4.5em;
     }
 
 }
