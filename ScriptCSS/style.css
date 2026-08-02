@@ -105,37 +105,18 @@ button:hover {
 }
 
 .card {
-  width: 90%;
-  max-width: 800px;
-  margin: 20px auto;
-  padding: 20px;
-  background-color: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-/*
-.card{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 
-    width:400px;
-
-    margin:20px auto;
-
-    padding:20px;
-
-    border-radius:12px;
-
-    box-shadow:0 0 10px rgba(0,0,0,.2);
-
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 20px;
 }
 
-.card img{
-
-    width:100%;
-
-    border-radius:10px;
-
-}
-*/
 .card-form {
     background: white;
     padding: 25px;
@@ -174,17 +155,10 @@ button:hover {
 }
 
 .card img {
-  width: 300px;
-  height: 300px;
+  width: 180px;
+  height: 180px;
   object-fit: cover;
   border-radius: 10px;
-}
-
-/* Organiza a imagem e as informações lado a lado */
-.card {
-  display: grid;
-  grid-template-columns: 300px 1fr;
-  gap: 25px;
 }
 
 .resultadoPesquisa {
@@ -233,4 +207,14 @@ button:hover {
 #msg {
     margin-top: 15px;
     font-weight: bold;
+}
+
+#resultados {
+    width: 95%;
+    max-width: 1400px;
+    margin: 20px auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
 }
