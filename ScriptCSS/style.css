@@ -187,21 +187,282 @@ section p {
     margin: 20px 0;
 }
 
-
 /* =========================================
    RODAPÉ
 ========================================= */
 
-footer {
+footer{
+
+    background:#fffee9;
+
+    border-top:2px solid #dcebd8;
+
+    padding:35px 50px;
+
+}
+
+footer > p{
+
+    margin-top:35px;
+
+    text-align:center;
+
+    color:#555;
+
+}
+
+/* =========================================
+   AGRADECIMENTOS
+========================================= */
+
+#Agradecimentos h1{
+
+    text-align:center;
+
+    color:rgb(106,193,105);
+
+    margin-bottom:25px;
+
+}
+
+/* =========================================
+   CONTEÚDO DO RODAPÉ
+========================================= */
+
+#ConteudoRodape{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-start;
+
+    gap:80px;
+
+}
+
+/* =========================================
+   COLUNAS
+========================================= */
+
+#Orientacao,
+#Instituicoes{
+
+    flex:1;
+
+}
+
+#Orientacao h3,
+#Instituicoes h3,
+#ProjetoRelacionado h3{
+
+    margin-top:0;
+
+    margin-bottom:20px;
+
+}
+
+/* =========================================
+   ITEM DO RODAPÉ
+========================================= */
+
+.Professor,
+.Instituicao{
+
+    position:relative;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:20px;
+
+    padding:10px 15px;
+
+    margin-bottom:12px;
+
+    border-radius:10px;
+
+    overflow:hidden;
+
+}
+
+/* =========================================
+   ANIMAÇÃO DOS ITENS
+========================================= */
+
+.Professor::before,
+.Instituicao::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:0;
+
+    height:100%;
+
+    background:#dff1de;
+
+    transition:width .35s ease;
+
+    z-index:0;
+
+}
+
+.Professor:hover::before,
+.Instituicao:hover::before{
+
+    width:100%;
+
+}
+
+/* =========================================
+   CONTEÚDO DOS ITENS
+========================================= */
+
+.Professor h4,
+.Instituicao h4,
+
+.Professor .Icones,
+.Instituicao .Icones{
+
+    position:relative;
+
+    z-index:2;
+
+    margin:0;
+
+}
+
+/* =========================================
+   ÍCONES
+========================================= */
+
+.Icones{
+
+    display:flex;
+
+    gap:8px;
+
+}
+
+footer img{
+
+    width:28px;
+
+    height:28px;
+
+    transition:.25s;
+
+}
+
+footer img:hover{
+
+    transform:scale(1.15);
+
+}
+
+/* =========================================
+   PROJETOS RELACIONADOS
+========================================= */
+
+#ProjetoRelacionado{
+
+    margin-top:35px;
+
+}
+
+/* =========================================
+   RESPONSIVIDADE
+========================================= */
+
+@media (max-width:900px){
+
+    #ConteudoRodape{
+
+        flex-direction:column;
+
+        gap:45px;
+
+    }
+
+}
+
+/* =========================================
+   SUBTÍTULOS DO RODAPÉ
+========================================= */
+
+#Agradecimentos h1 {
+    font-family: 'Gwendolyn', cursive;
+
+    font-size: 4em;
+
+    font-weight: normal;
+
     text-align: center;
 
-    padding: 20px;
+    color:rgb(106,193,105);
 
-    margin-top: 40px;
+    margin: 0;
 
-    background-color: #fffee9;
+    line-height: 0.8;
+}
 
-    border-top: 1px solid #dcebd8;
+#Orientacao h3 {
+    font-family: 'Gwendolyn', cursive;
+
+    font-size: 3em;
+
+    font-weight: normal;
+
+    text-align: center;
+
+    margin: 0;
+
+    line-height: 0.8;
+
+    color:rgb(106,193,105);
+}
+
+#ProjetoRelacionado h3 {
+    font-family: 'Gwendolyn', cursive;
+
+    font-size: 3em;
+
+    font-weight: normal;
+
+    text-align: center;
+
+    color:rgb(106,193,105);
+
+    margin: 0;
+
+    line-height: 0.8;
+}
+
+#Instituicoes h3 {
+    font-family: 'Gwendolyn', cursive;
+
+    font-size: 3em;
+
+    font-weight: normal;
+
+    text-align: center;
+
+    color:rgb(106,193,105);
+
+    margin: 0;
+
+    line-height: 0.8;
+
+    margin-bottom: 10px;
 }
 
 
